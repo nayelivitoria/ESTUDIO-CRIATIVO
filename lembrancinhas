@@ -1,0 +1,82 @@
+// MENU DO CELULAR
+
+function abrirMenu() {
+
+    const menu = document.getElementById("menu");
+
+    menu.classList.toggle("aberto");
+
+}
+
+
+// WHATSAPP
+
+const numero = "5583982238275";
+
+const mensagem =
+    "Olá! 💕 Gostaria de fazer um orçamento de lembrancinhas personalizadas para minha festa.";
+
+const link =
+    "https://wa.me/" +
+    numero +
+    "?text=" +
+    encodeURIComponent(mensagem);
+
+document.getElementById("whatsapp").href = link;
+
+
+// BOTÃO VOLTAR AO TOPO
+
+const botaoTopo = document.getElementById("topo");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 400) {
+
+        botaoTopo.style.display = "block";
+
+    } else {
+
+        botaoTopo.style.display = "none";
+
+    }
+
+});
+
+
+function voltarTopo() {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+
+// FECHAR MENU AO CLICAR EM UM LINK
+
+const linksMenu =
+    document.querySelectorAll("#menu a");
+
+linksMenu.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        document
+            .getElementById("menu")
+            .classList.remove("aberto");
+
+    });
+
+});
+
+
+// MENSAGEM NO CONSOLE
+
+console.log(
+    "🎀 Bem-vinda à Pequenos Detalhes!"
+);
