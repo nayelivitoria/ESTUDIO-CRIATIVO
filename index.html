@@ -1,92 +1,430 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Estúdio Criativo</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff0f5;
-      color: #333;
-    }
-    header {
-      background-color: #ffb6c1;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header img {
-      width: 120px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    .produtos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .produto {
-      background-color: white;
-      border-radius: 1rem;
-      padding: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 200px;
-    }
-    .produto img {
-      width: 100%;
-      border-radius: 0.5rem;
-    }
-    .whatsapp {
-      margin-top: 2rem;
-      display: inline-block;
-      padding: 1rem 1.5rem;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nayeli Vitória | Portfólio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8f7fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* MENU */
+        header {
+            background: #6c4ab6;
+            color: white;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e2d4ff;
+        }
+
+        /* INÍCIO */
+        .inicio {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #6c4ab6, #9b7bd8);
+            color: white;
+        }
+
+        .inicio-content {
+            max-width: 800px;
+        }
+
+        .inicio h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .inicio h2 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .inicio p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .botao {
+            display: inline-block;
+            background: white;
+            color: #6c4ab6;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            transform: scale(1.05);
+            background: #eee8ff;
+        }
+
+        /* SEÇÕES */
+        section {
+            padding: 70px 8%;
+        }
+
+        .titulo {
+            text-align: center;
+            color: #6c4ab6;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .sobre {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .sobre p {
+            margin-bottom: 20px;
+        }
+
+        /* HABILIDADES */
+        .habilidades {
+            background: white;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: #f8f7fc;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card h3 {
+            color: #6c4ab6;
+            margin-bottom: 10px;
+        }
+
+        /* OBJETIVO */
+        .objetivo {
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        /* CONTATO */
+        .contato {
+            background: #6c4ab6;
+            color: white;
+            text-align: center;
+        }
+
+        .contato .titulo {
+            color: white;
+        }
+
+        .contato p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .contato a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background: #4b3180;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .inicio h1 {
+                font-size: 38px;
+            }
+
+            .inicio h2 {
+                font-size: 21px;
+            }
+
+            .inicio p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <img src="logo.png" alt="Logo Estúdio Criativo">
-    <h1>Estúdio Criativo</h1>
-    <p>Lembrancinhas personalizadas para aniversários</p>
-  </header>
 
-  <section>
-    <h2>Nossos Produtos</h2>
-    <div class="produtos">
-      <div class="produto">
-        <img src="https://via.placeholder.com/200x150?text=Lembrancinha+1" alt="Lembrancinha 1">
-        <p>Caixinha personalizada</p>
-      </div>
-      <div class="produto">
-        <img src="https://via.placeholder.com/200x150?text=Lembrancinha+2" alt="Lembrancinha 2">
-        <p>Chaveiro temático</p>
-      </div>
-      <div class="produto">
-        <img src="https://via.placeholder.com/200x150?text=Lembrancinha+3" alt="Lembrancinha 3">
-        <p>Tag personalizada</p>
-      </div>
-    </div>
+    <!-- MENU -->
+    <header>
+        <nav>
+            <div class="logo">Nayeli Vitória</div>
 
-    <a class="whatsapp" href="https://wa.me/5583982238275?text=Ol%C3%A1%20Nay!!%3F" target="_blank">Fale comigo no WhatsApp</a>
-  </section>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#objetivo">Objetivo</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- INÍCIO -->
+    <section class="inicio" id="inicio">
+
+        <div class="inicio-content">
+
+            <h1>Olá, eu sou Nayeli Vitória!</h1>
+
+            <h2>Estudante de Desenvolvimento de Sistemas</h2>
+
+            <p>
+                Tenho 22 anos, sou de Pitimbu, Paraíba,
+                e estou construindo minha trajetória profissional
+                na área de tecnologia.
+            </p>
+
+            <a href="#sobre" class="botao">
+                Conheça minha história
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE MIM -->
+    <section id="sobre">
+
+        <h2 class="titulo">Sobre mim</h2>
+
+        <div class="sobre">
+
+            <p>
+                Tenho 22 anos e sou de Pitimbu, Paraíba.
+                Sou mãe de uma menina de 10 meses e acredito
+                que cada experiência da minha vida contribui
+                para o meu crescimento pessoal e profissional.
+            </p>
+
+            <p>
+                Concluí o Ensino Médio, realizei alguns cursos
+                de capacitação e, atualmente, estou cursando
+                a graduação em <strong>Desenvolvimento de Sistemas
+                na UNIPÊ</strong>.
+            </p>
+
+            <p>
+                Sou uma pessoa curiosa, dedicada e sempre
+                disposta a aprender. Meu objetivo é buscar
+                constantemente novos conhecimentos, não apenas
+                na área de tecnologia, mas também em diferentes
+                áreas que possam contribuir para o meu desenvolvimento.
+            </p>
+
+            <p>
+                Gosto de desafios, tenho facilidade para trabalhar
+                em equipe e procuro sempre dar o meu melhor em
+                tudo o que faço.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HABILIDADES -->
+    <section class="habilidades" id="habilidades">
+
+        <h2 class="titulo">Minhas habilidades</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>💻 Tecnologia</h3>
+                <p>Conhecimentos em tecnologia e sistemas.</p>
+            </div>
+
+            <div class="card">
+                <h3>🌐 HTML e CSS</h3>
+                <p>Noções de desenvolvimento de páginas web.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧠 Lógica</h3>
+                <p>Conhecimentos em lógica de programação.</p>
+            </div>
+
+            <div class="card">
+                <h3>🤝 Trabalho em equipe</h3>
+                <p>Facilidade para colaborar e trabalhar em equipe.</p>
+            </div>
+
+            <div class="card">
+                <h3>💬 Comunicação</h3>
+                <p>Boa comunicação e disposição para aprender.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎯 Organização</h3>
+                <p>Responsabilidade e organização nas atividades.</p>
+            </div>
+
+            <div class="card">
+                <h3>💡 Criatividade</h3>
+                <p>Busco soluções criativas para diferentes desafios.</p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Proatividade</h3>
+                <p>Iniciativa para aprender e enfrentar novos desafios.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OBJETIVO -->
+    <section id="objetivo">
+
+        <h2 class="titulo">Meu objetivo</h2>
+
+        <div class="objetivo">
+
+            <p>
+                Meu objetivo profissional é crescer na área de
+                tecnologia, adquirir cada vez mais experiência
+                e conhecimento e, futuramente, atuar
+                profissionalmente com desenvolvimento de sistemas.
+            </p>
+
+            <br>
+
+            <p>
+                Estou em constante aprendizado e aberta a novas
+                oportunidades, desafios e experiências que possam
+                contribuir para minha evolução profissional.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+
+        <h2 class="titulo">Vamos conversar?</h2>
+
+        <p>
+            Estou aberta a novas oportunidades,
+            projetos e experiências profissionais.
+        </p>
+
+        <a href="mailto:seuemail@email.com" class="botao">
+            Entre em contato
+        </a>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            © 2026 Nayeli Vitória | Portfólio
+        </p>
+
+        <p>
+            Desenvolvido por Nayeli Vitória 💜
+        </p>
+
+    </footer>
+
 </body>
 </html>
